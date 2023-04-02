@@ -1,0 +1,199 @@
+{
+  "formFlow": {
+    "datapointId1": {
+      "edges": [
+        {
+          "id": 1,
+          "conditions": {},
+          "event": {},
+          "next": "datapointId2"
+        }
+      ]
+    },
+    "datapointId2": {
+      "edges": [
+        {
+          "id": 2,
+          "conditions": {},
+          "event": {},
+          "next": "datapointId3"
+        }
+      ]
+    },
+    "datapointId3": {
+      "edges": [
+        {
+          "id": 3,
+          "conditions": {},
+          "event": {},
+          "next": "datapointId4"
+        }
+      ]
+    },
+    "datapointId4": {
+      "edges": [
+        {
+          "id": 4,
+          "conditions": {},
+          "event": {},
+          "next": "datapointId5"
+        }
+      ]
+    },
+    "datapointId5": {
+      "edges": [
+        {
+          "id": 5,
+          "conditions": {},
+          "event": {}
+        }
+      ]
+    }
+  },
+  "dataDefinitions": {
+    "datapointId1": {
+      "id": "datapointId1",
+      "name": "string",
+      "questionText": "What is you First Name?",
+      "questionTextKey": "firstName",
+      "reportingLabels": [
+        {
+          "key": "default",
+          "value": "firstName"
+        }
+      ],
+      "dataType": "string",
+      "options": [],
+      "validations": []
+    },
+    "datapointId2": {
+      "id": "datapointId2",
+      "name": "secondName",
+      "questionText": "What is you Second Name?",
+      "questionTextKey": "SecondName",
+      "reportingLabels": [
+        {
+          "key": "default",
+          "value": "SecondName"
+        }
+      ],
+      "dataType": "string",
+      "options": [],
+      "validations": []
+    },
+    "datapointId3": {
+      "id": "datapointId3",
+      "name": "Email OR PhoneNumber",
+      "questionText": "Preferred Contact",
+      "questionTextKey": "Email or PhoneNumber",
+      "reportingLabels": [
+        {
+          "key": "default",
+          "value": "Email, PhoneNumber"
+        }
+      ],
+      "dataType": "string",
+      "options": [
+        {
+          "id": 1,
+          "order": 1,
+          "key": "key",
+          "value": "email",
+          "optionText": "email",
+          "optionTextKey": "email"
+        },
+        {
+          "id": 1,
+          "order": 1,
+          "key": "key",
+          "value": "phoneNumber",
+          "optionText": "phoneNumber",
+          "optionTextKey": "Phone Number"
+        },
+        {
+          "id": 1,
+          "order": 1,
+          "key": "key",
+          "value": "None",
+          "optionText": "none",
+          "optionTextKey": "None"
+        }
+      ],
+      "validations": []
+    },
+    "datapointId4": {
+      "id": "datapointId4",
+      "name": "email",
+      "questionText": "Enter Your Email",
+      "questionTextKey": "Email",
+      "reportingLabels": [
+        {
+          "key": "default",
+          "value": "Email"
+        }
+      ],
+      "dataType": "string",
+      "options": [],
+      "validations": []
+    },
+    "datapointId5": {
+      "id": "datapointId5",
+      "name": "<Number>",
+      "questionText": "Enter Your Phone Number",
+      "questionTextKey": "Phone Number",
+      "reportingLabels": [
+        {
+          "key": "default",
+          "value": "PhoneNumber"
+        }
+      ],
+      "dataType": "number",
+      "options": [],
+      "validations": []
+    }
+  },
+  "layouts": [
+    {
+      "type": "cli",
+      "default": true,
+      "breakpoint": null,
+      "content": [
+        {
+          "id": 1,
+          "order": 1,
+          "type": "text",
+          "dataId": "datapointId1",
+          "styling": {}
+        },
+        {
+          "id": 2,
+          "order": 2,
+          "type": "text",
+          "dataId": "datapointId2",
+          "styling": {}
+        },
+        {
+          "id": 3,
+          "order": 3,
+          "type": "list",
+          "dataId": "datapointId3",
+          "styling": {}
+        },
+        {
+          "id": 4,
+          "order": 4,
+          "type": "text",
+          "dataId": "datapointId4",
+          "styling": {}
+        },
+        {
+          "id": 5,
+          "order": 5,
+          "type": "text",
+          "dataId": "datapointId5",
+          "styling": {}
+        }
+      ]
+    }
+  ]
+}

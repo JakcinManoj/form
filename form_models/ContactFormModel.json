@@ -1,0 +1,166 @@
+{
+  "formFlow": {
+    "datapointId1": {
+      "edges": [
+        { "id": 1, "conditions": {}, "event": {}, "next": "datapointId2" }
+      ]
+    },
+    "datapointId2": {
+      "edges": [
+        {
+          "id": 2,
+          "conditions": {
+            "all": [
+              {
+                "fact": "fact",
+                "operator": "equal",
+                "value": "email"
+              }
+            ]
+          },
+          "event": {
+            "type": "email"
+          },
+          "next": "datapointId3"
+        },
+        {
+          "id": 3,
+          "conditions": {
+            "all": [
+              {
+                "fact": "fact",
+                "operator": "equal",
+                "value": "phoneNumber"
+              }
+            ]
+          },
+          "event": {
+            "type": "phoneNumber"
+          },
+          "next": "datapointId4"
+        }
+      ]
+    },
+    "datapointId3": {
+      "edges": [
+        { "id": 4, "conditions": {}, "event": {}, "next": "datapointId5" }
+      ]
+    },
+    "datapointId4": {
+      "edges": [
+        { "id": 5, "conditions": {}, "event": {}, "next": "datapointId5" }
+      ]
+    }
+  },
+  "dataDefinitions": {
+    "datapointId1": {
+      "id": "datapointId1",
+      "name": "Name",
+      "questionText": "What is your Name?",
+      "questionTextKey": "Name",
+      "reportingLabels": [{ "key": "default", "value": "Name" }],
+      "dataType": "string",
+      "options": [],
+      "validations": []
+    },
+    "datapointId2": {
+      "id": "datapointId2",
+      "name": "Mail or PhoneNumber",
+      "questionText": "Prefered Contact?",
+      "questionTextKey": "mail or phoneNumber",
+      "reportingLabels": [{ "key": "default", "value": "mail or phoneNumber" }],
+      "dataType": "list",
+      "validations": [],
+      "options": [
+        {
+          "id": 1,
+          "order": 1,
+          "key": "key",
+          "value": "email",
+          "optionText": "email",
+          "optionTextKey": "email"
+        },
+        {
+          "id": 1,
+          "order": 1,
+          "key": "key",
+          "value": "phoneNumber",
+          "optionText": "phoneNumber",
+          "optionTextKey": "PhoneNumber"
+        }
+      ]
+    },
+    "datapointId3": {
+      "id": "datapointId3",
+      "name": "email",
+      "questionText": "Please enter your email id?",
+      "questionTextKey": "email",
+      "reportingLabels": [{ "key": "default", "value": "email" }],
+      "dataType": "string",
+      "validations": []
+    },
+    "datapointId4": {
+      "id": "datapointId4",
+      "name": "phoneNumber",
+      "questionText": "Please enter your phoneNumber?",
+      "questionTextKey": "phoneNumber",
+      "reportingLabels": [{ "key": "default", "value": "phoneNumber" }],
+      "dataType": "number",
+      "validations": []
+    },
+    "datapointId5": {
+      "id": "datapointId5",
+      "name": "submit",
+      "questionText": "Would you like to submit?",
+      "questionTextKey": "submit",
+      "reportingLabels": [{ "key": "default", "value": "submit" }],
+      "dataType": "boolean",
+      "validations": []
+    }
+    
+  },
+  "layouts": [
+    {
+      "type": "cli",
+      "default": true,
+      "breakpoint": null,
+      "content": [
+        {
+          "id": 1,
+          "order": 1,
+          "type": "text",
+          "dataId": "datapointId1",
+          "styling": {}
+        },
+        {
+          "id": 2,
+          "order": 2,
+          "type": "list",
+          "dataId": "datapointId2",
+          "styling": {}
+        },
+        {
+          "id": 3,
+          "order": 3,
+          "type": "text",
+          "dataId": "datapointId3",
+          "styling": {}
+        },
+        {
+          "id": 4,
+          "order": 4,
+          "type": "number",
+          "dataId": "datapointId4",
+          "styling": {}
+        },
+        {
+          "id": 5,
+          "order": 5,
+          "type": "confirm",
+          "dataId": "datapointId5",
+          "styling": {}
+        }
+      ]
+    }
+  ]
+}

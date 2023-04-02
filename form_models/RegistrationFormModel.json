@@ -1,0 +1,291 @@
+{
+  "formFlow": {
+    "datapointId1": {
+      "edges": [
+        { "id": 1, "conditions": {}, "event": {}, "next": "datapointId2" }
+      ]
+    },
+    "datapointId2": {
+      "edges": [
+        { "id": 2, "conditions": {}, "event": {}, "next": "datapointId3" }
+      ]
+    },
+    "datapointId3": {
+      "edges": [
+        { "id": 3, "conditions": {}, "event": {}, "next": "datapointId4" }
+      ]
+    },
+    "datapointId4": {
+      "edges": [
+        { "id": 4, "conditions": {}, "event": {}, "next": "datapointId5" }
+      ]
+    },
+    "datapointId5": {
+      "edges": [
+        { "id": 5, "conditions": {}, "event": {}, "next": "datapointId6" }
+      ]
+    },
+    "datapointId6": {
+      "edges": [
+        { "id": 6, "conditions": {}, "event": {}, "next": "datapointId7" }
+      ]
+    },
+    "datapointId7": {
+      "edges": [
+        { "id": 7, "conditions": {}, "event": {}, "next": "datapointId8" }
+      ]
+    },
+    "datapointId8": {
+      "edges": [
+        { "id": 8, "conditions": {}, "event": {}, "next": "datapointId9" }
+      ]
+    },
+    "datapointId9": {
+      "edges": [
+        
+      ]
+    }
+  },
+  "dataDefinitions": {
+    "datapointId1": {
+      "id": "datapointId1",
+      "name": "string",
+      "questionText": "What is you First Name?",
+      "questionTextKey": "firstName",
+      "reportingLabels": [{ "key": "default", "value": "firstName" }],
+      "dataType": "string",
+      "options": [],
+      "validations": []
+    },
+
+    "datapointId2": {
+      "id": "datapointId2",
+      "name": "secondName",
+      "questionText": "What is you Second Name?",
+      "questionTextKey": "SecondName",
+      "reportingLabels": [{ "key": "default", "value": "SecondName" }],
+      "dataType": "string",
+      "options": [],
+      "validations": []
+    },
+    "datapointId3": {
+      "id": "datapointId3",
+      "name": "Email OR PhoneNumber",
+      "questionText": "Preferred Contact",
+      "questionTextKey": "Email or PhoneNumber",
+      "reportingLabels": [{ "key": "default", "value": "Email, PhoneNumber" }],
+      "dataType": "list",
+      "options": [
+        {
+          "id": 1,
+          "order": 1,
+          "key": "key",
+          "value": "email",
+          "optionText": "Preferred Contact",
+          "optionTextKey": "Email or PhoneNumber"
+        },
+        {
+          "id": 2,
+          "order": 2,
+          "key": "key",
+          "value": "phoneNumber",
+          "optionText": "Preferred Contact",
+          "optionTextKey": "Email or PhoneNumber"
+        },
+        {
+          "id": 3,
+          "order": 3,
+          "key": "key",
+          "value": "None",
+          "optionText": "Preferred Contact",
+          "optionTextKey": "Email or PhoneNumber"
+        }
+      ],
+      "validations": []
+    },
+    "datapointId4": {
+      "id": "datapointId4",
+      "name": "email",
+      "questionText": "Enter Your Email",
+      "questionTextKey": "Email",
+      "reportingLabels": [{ "key": "default", "value": "Email" }],
+      "dataType": "string",
+      "options": [],
+      "validations": []
+    },
+    "datapointId5": {
+      "id": "datapointId5",
+      "name": "<Number>",
+      "questionText": "Enter Your Phone Number",
+      "questionTextKey": "Phone Number",
+      "reportingLabels": [{ "key": "default", "value": "PhoneNumber" }],
+      "dataType": "number",
+      "options": [],
+      "validations": []
+    },
+    "datapointId6": {
+      "id": "datapointId6",
+      "name": "List",
+      "questionText": "Select your Gender:",
+      "questionTextKey": "Gender",
+      "reportingLabels": [{ "key": "default", "value": "Gender" }],
+      "dataType": "list",
+      "options": [
+        {
+          "id": 1,
+          "order": 1,
+          "key": "key",
+          "value": "Male",
+          "optionText": "Select your Gender:",
+          "optionTextKey": "Gender"
+        },
+        {
+          "id": 2,
+          "order": 2,
+          "key": "key",
+          "value": "Female",
+          "optionText": "Select your Gender:",
+          "optionTextKey": "Gender"
+        }
+      ],
+      "validations": []
+    },
+    "datapointId7": {
+      "id": "datapointId7",
+      "name": "checkbox",
+      "questionText": "Select Government ID available : ",
+      "questionTextKey": "Goverment ID Number",
+      "reportingLabels": [{ "key": "default", "value": "Goverment ID Number" }],
+      "dataType": "checkbox",
+      "options": [
+        {
+          "id": 1,
+          "order": 1,
+          "key": "key",
+          "value": "AADHAR",
+          "optionText": "Select Government ID available : ",
+          "optionTextKey": "Goverment ID Number"
+        },
+        {
+          "id": 2,
+          "order": 2,
+          "key": "key",
+          "value": "PAN",
+          "optionText": "Select Government ID available : ",
+          "optionTextKey": "Goverment ID Number"
+        },
+        {
+          "id": 3,
+          "order": 3,
+          "key": "key",
+          "value": "Passport",
+          "optionText": "Select Government ID available : ",
+          "optionTextKey": "Goverment ID Number"
+        }
+      ],
+      "validations": []
+    },
+    "datapointId8": {
+      "id": "datapointId8",
+      "name": "email",
+      "questionText": "Enter your Goverment Id Number : ",
+      "questionTextKey": "Email",
+      "reportingLabels": [{ "key": "default", "value": "Email" }],
+      "dataType": "password",
+      "options": [],
+      "validations": []
+    },
+    "datapointId9": {
+      "id": "datapointId9",
+      "name": "Boolean",
+      "questionText": "Do you want to Submit ?",
+      "questionTextKey": "Submission",
+      "reportingLabels": [{ "key": "default", "value": "Submission" }],
+      "dataType": "boolean",
+      "options": [],
+      "validations": []
+    }
+  },
+
+  "layouts": [
+    {
+      "type": "cli",
+      "default": true,
+      "breakpoint": null,
+      "content": [
+        {
+          "id": 1,
+          "order": 1,
+          "type": "text",
+          "dataId": "datapointId1",
+          "styling": {}
+        },
+        {
+          "id": 2,
+          "order": 2,
+          "type": "text",
+          "dataId": "datapointId2",
+          "styling": {}
+        },
+        {
+          "id": 3,
+          "order": 3,
+          "type": "list",
+          "dataId": "datapointId3",
+          "styling": {}
+        },
+        {
+          "id": 4,
+          "order": 4,
+          "type": "text",
+          "dataId": "datapointId4",
+          "styling": {}
+        },
+        {
+          "id": 5,
+          "order": 5,
+          "type": "number",
+          "dataId": "datapointId5",
+          "styling": {}
+        },
+        {
+          "id": 6,
+          "order": 6,
+          "type": "list",
+          "dataId": "datapointId6",
+          "styling": {}
+        },
+        {
+          "id": 7,
+          "order": 7,
+          "type": "checkbox",
+          "dataId": "datapointId7",
+          "styling": {}
+        },
+        {
+          "id": 8,
+          "order": 8,
+          "type": "password",
+          "dataId": "datapointId8",
+          "styling": {}
+        },
+        {
+          "id": 9,
+          "order": 9,
+          "type": "confirm",
+          "dataId": "datapointId9",
+          "styling": {}
+        }
+       
+      ]
+    }
+
+
+    
+  ]
+
+
+
+}
+
+
