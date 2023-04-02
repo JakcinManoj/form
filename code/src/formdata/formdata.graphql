@@ -1,0 +1,98 @@
+scalar Object
+
+input CreateFormDataInput {
+  collectedDateTime: String
+  collectedTimezone: String
+  receivedDateTime: String
+  sourceQuestionId: String
+  configuredQuestionText: String
+  displayedQuestionText: String
+  rawInput: Object
+  selectedOptions: [SelectedOptionInput]
+  formattedInput: Object
+  calculatedResult: Object
+  metadata: MetaDataInput
+}
+
+input SelectedOptionInput {
+  key: String
+  value: Object
+  textShownToUser: String
+}
+
+input MetaDataInput {
+  submissionPlatform: String
+  submissionFormFactor: String
+  language: String
+}
+
+input FormFlowInput {
+  edges: [EdgeInput]
+}
+
+input EdgeInput {
+  id: Int
+  conditions: Object
+  event: Object
+  next: String
+}
+
+input DataDefinitionInput {
+  id: String
+  name: String
+  questionText: String
+  questionTextKey: String
+  reportingLabels: [ReportingLabelInput]
+  dataType: String
+  options: [Object]
+  validations: [Object]
+}
+
+input ReportingLabelInput {
+  key: String
+  value: String
+}
+
+type SubmittedFormDataResponse {
+  submittedFormData: [FormData]
+  nextDataPointId: String
+}
+
+type FormData {
+  collectedDateTime: String
+  collectedTimezone: String
+  receivedDateTime: String
+  sourceQuestionId: String
+  configuredQuestionText: String
+  displayedQuestionText: String
+  rawInput: Object
+  selectedOptions: [SelectedOption]
+  formattedInput: Object
+  calculatedResult: Object
+  metadata: MetaData
+}
+
+type SelectedOption {
+  key: String
+  value: Object
+  textShownToUser: String
+}
+
+type MetaData {
+  submissionPlatform: String
+  submissionFormFactor: String
+  language: String
+}
+
+type Mutation {
+  createFormData(
+    createFormDataInput: [CreateFormDataInput!]!
+    formFlowInput: FormFlowInput
+    dataDefinitionInput: DataDefinitionInput
+    userInput: Object
+  ): SubmittedFormDataResponse
+}
+
+type Query {
+  getFormData: String
+}
